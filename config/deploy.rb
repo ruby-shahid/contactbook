@@ -1,5 +1,6 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.10.0"
+server 'ec2-52-91-94-214.compute-1.amazonaws.com', roles: [:web, :app, :db], primary: true
 
 set :application, "contactbook"
 set :repo_url, "git@github.com:ruby-shahid/contactbook.git"
@@ -8,6 +9,7 @@ set :repo_url, "git@github.com:ruby-shahid/contactbook.git"
 set :branch, :master
 set :deploy_to, "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
 set :pty, true
+set :use_sudo, false
 # set :linked_files, %w{config/database.yml config/application.yml}
 # set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 set :keep_releases, 5
