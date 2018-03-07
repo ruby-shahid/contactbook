@@ -1,6 +1,6 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.10.0"
-server 'ec2-52-91-94-214.compute-1.amazonaws.com', roles: [:web, :app, :db], primary: true
+# server 'ec2-52-91-94-214.compute-1.amazonaws.com', roles: [:web, :app, :db], primary: true
 
 set :application, "contactbook"
 set :repo_url, "git@github.com:ruby-shahid/contactbook.git"
